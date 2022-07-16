@@ -1,0 +1,196 @@
+/* CSS Reset */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Bree Serif', serif;
+}
+
+/* CSS variables */
+:root {
+    --navbar-height: 30px;
+}
+
+/* Navigation bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* Navigation bar : Logo and Image */
+#logo {
+    margin: 1px 1px;
+}
+
+#logo img {
+    clip-path: circle(50% at 50% 50%);
+    margin: 5px 5px;
+    height: 86px;
+}
+
+/* Navigation bar : List styling */
+#navbar ul{
+    display: flex;
+}
+
+
+#navbar ul li{
+    /* color: white; */
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 13px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home section */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 200px;
+    height: 375px;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url("./Images/Background/bg.jpg") no-repeat center center/cover;
+    width: 100%;
+    height: 80%;
+    z-index: -1;
+    opacity: 0.75;
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+}
+#home p{
+    color: white; 
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Favourites section */
+#fav{
+    display: flex;
+    margin: 34px;
+    /* justify-content: center; */
+    /* align-items: center; */
+
+}
+
+#fav .box{
+    border: 2px solid brown;
+    margin: 2px 50px;
+    padding: 34px;
+    border-radius: 25px;
+    background-color: rgb(255, 231, 200);
+    margin-bottom: 20px;
+    
+}
+#fav .box img{
+    height: 160px;
+    display: block;
+    margin: auto;
+
+}
+
+/* Utility classes */
+.h-primary{
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-size: 2.8rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 5px 10px;
+    border: 2px solid white;
+    background-color: burlywood;
+    color: maroon;
+    margin: 15px;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.center{
+    text-align: center;
+}
+
+/* Contact section */
+#contact{
+    position: relative;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.3rem;
+    font-size: 1rem;
+}
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+    font-size: 1.2rem;
+}
+
+#contact::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url("./Images/Background/contact.jpg") no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+/* Footer section */
+footer{
+    background-color: burlywood;
+    color: maroon;
+    padding: 5px 20px;
+}
